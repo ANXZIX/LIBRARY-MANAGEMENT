@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0; /* Change background color to light gray */
+}
+
+input[type="text"],
+input[type="password"],
+button,
+a { /* Added 'a' selector for logout button */
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none; /* Added text-decoration for 'a' tag */
+    transition: all 0.3s ease;
+    display: inline-block; /* Display buttons in a single line */
+}
+
+button,
+a { /* Added 'a' selector for logout button */
+    background-color: #007bff;
+    color: #fff;
+}
+
+button:hover,
+a:hover { /* Added 'a:hover' for logout button */
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
