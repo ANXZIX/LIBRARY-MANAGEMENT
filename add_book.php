@@ -15,13 +15,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-<!-- HTML form to add a new book -->
-<form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
-    Title: <input type="text" name="title" required><br>
-    Author: <input type="text" name="author" required><br>
-    Quantity: <input type="number" name="quantity" required><br>
-    <input type="submit" value="Add Book">
-</form>
-
-<!-- Back button to redirect to admin_library.php -->
-<a href="admin_library.php">Back</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Books</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Add Book</h2>
+        <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="author">Author:</label>
+                <input type="text" class="form-control" id="author" name="author" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" class="form-control" id="quantity" name="quantity" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Book</button>
+        </form>
+        <a href="admin_library.php" class="btn btn-secondary mt-3">Back</a>
+    </div>
+</body>
+</html>
